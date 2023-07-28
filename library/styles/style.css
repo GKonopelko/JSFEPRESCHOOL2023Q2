@@ -1,0 +1,273 @@
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+input::-ms-clear {
+  display: none;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+
+/*--------------------*/
+/* ********* */
+
+:root {
+  --lblack: rgba(12, 12, 14, 1);
+  --black: rgba(0, 0, 0, 1);
+  --beige: rgba(187, 148, 95, 1);
+  --gray: rgba(142, 142, 142, 1);
+  --white: rgba(255, 255, 255, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: Inter;
+  font-size: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box; 
+}
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+  align-items:center;
+}
+
+/* Header */
+
+.header {
+  color: var(--white);
+  background: var(--lblack);
+  display: flex;
+  width: 100%;
+  height: 90px;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: Forum;
+  font-size: 30px;
+  line-height: 50%;
+  width: 768px;
+  text-align: left;
+}  
+
+.menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu ul li{
+  padding-right: 30px;
+  font-family: Regular;
+  font-size: 20px;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.menu ul li a{
+  color: var(--white);
+  transition: all ease 0.3s;
+}
+
+.menu ul li:hover a{
+  color: var(--beige);
+}
+
+
+/* Header */
+
+
+/* Main */
+.main {
+ width: 100%;
+}
+
+.welcome {
+  height: 600px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../images/welcome.jpg");
+  padding: 220px 840px 160px 0;
+}
+
+.welcome__title {
+  height: 220px;
+  width: 600px;
+  background-color: var(--lblack);
+}
+
+h1 {
+  font-family: Regular;
+  font-size: 40px;
+  letter-spacing: 3px;
+  color: var(--white);
+  text-transform: uppercase;
+  padding: 35px 40px;
+}
+
+
+.about {
+  height: 837px;
+  width: 100%;
+  padding: 20px;
+}
+
+.section-title {
+  font-family: Forum;
+  font-size: 40px;
+  letter-spacing: 2px;
+  color:var(--lblack);
+  height: 40px;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  padding-top: 20px;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--lblack);
+}
+
+.section-text {
+  font-style: Inter;
+  font-size: 20px;
+  color: var(--black);
+  margin: 100px 0 20px 0;
+}
+
+
+.about__images {
+  height: 560px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel-pagination {
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.pagination__button {
+  width:26px;
+  height: 26px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.pagination__button:hover .dot{
+  background-color: var(--beige);
+}
+
+.pagination__button .dot{
+  width:16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--lblack);
+  transition: all ease 0.4s;
+}
+
+
+.pagination__button:first-child .dot{
+  background-color: var(--beige);
+}
+
+.favorites {
+  height: 1439px;
+  padding: 20px;
+}
+
+.pick {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  padding: 80px 0;
+}
+
+.seasons {
+  font-size: 20px;
+  text-align: left;
+  padding: 40px 0;
+}
+
+
+
+/* Main  */
+
+
+/* Footer */
+.footer{
+  background: blue;
+}
+/* Footer */
