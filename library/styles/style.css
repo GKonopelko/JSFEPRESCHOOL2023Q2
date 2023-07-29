@@ -130,11 +130,12 @@ html {
 
 .menu ul li a{
   color: var(--white);
-  transition: all ease 0.3s;
+  transition: all ease 0.2s;
 }
 
 .menu ul li:hover a{
   color: var(--beige);
+  transition: all 0.5s ease;
 }
 
 
@@ -228,6 +229,7 @@ h1 {
 
 .pagination__button:hover .dot{
   background-color: var(--beige);
+  transition: all 0.2s ease;
 }
 
 .pagination__button .dot{
@@ -390,10 +392,13 @@ h1 {
   position: absolute;
   left: 20px;
   bottom: 15px;
+  transition: all 0.2s ease;
 }
 
 .book__button:hover {
     background-color: var(--beige);
+    border: none;
+    transition: all 0.5s ease;
 }
 
 .disabled {
@@ -569,6 +574,14 @@ line-height: 80px;
   text-align: center;
   background-color: var(--white);
   border: 1px solid var(--lblack);
+  transition: all 0.2s ease;
+  border-radius: 3px;
+}
+
+.card__button:hover {
+  background-color: var(--beige);
+  border: none;
+  transition: all 0.5s ease;
 }
 
 
@@ -610,10 +623,13 @@ line-height: 80px;
   font-weight: bold;
   border-radius: 3px;
   border: 1px solid;
+  transition: all 0.2s ease;
 }
 
 .sign-button:hover{
-  color:var(--beige);
+  background-color:var(--beige);
+  border:none;
+  transition: all 0.5s ease;
 }
 
 /* Main  */
@@ -621,6 +637,52 @@ line-height: 80px;
 
 /* Footer */
 .footer{
-  background: blue;
+  height: 250px;
+  background: var(--black);
+  padding: 20px;
+  width: 100%;
+  color: var(--white);
 }
+
+.library__links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.adress {
+  text-align: left;
+}
+
+.social-links{
+ display: flex;
+}
+
+.link {
+  width: 24px;
+  height: 24px;
+  margin: 18px 15px 38px 0;
+}
+
+.school__links {
+  border-top: 1px solid var(--white);
+}
+
+.timetable {
+  text-align: right;
+}
+
+.school__links {
+  display:flex;
+  justify-content: space-between;
+  padding: 44px 0;
+  font-size: 20px;
+  
+}
+
+.school__links a {
+  color: var(--white);
+}
+
+
+
 /* Footer */
