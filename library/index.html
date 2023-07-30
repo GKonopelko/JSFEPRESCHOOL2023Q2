@@ -5,7 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Library</title>
   <link href="styles/style.css" rel="stylesheet">
-  <link rel="icon" href="../library/images/welcome.jpg">
+  <link rel="apple-touch-icon" sizes="180x180" href="../library/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../library/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../library/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
 <body class="body">
@@ -16,11 +23,11 @@
       </div>
       <nav class="menu">
         <ul>
-          <li><a href="">About</a></li>
-          <li><a href="">Favorites</a></li>
-          <li><a href="">Coffee shop</a></li>
-          <li><a href="">Contacts</a></li>
-          <li><a href="">Library Card</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#favorites">Favorites</a></li>
+          <li><a href="#coffee">Coffee shop</a></li>
+          <li><a href="#contacts">Contacts</a></li>
+          <li><a href="#card">Library Card</a></li>
         </ul>
       </nav>
       <div class="header__icon"><img src="images/icon_profile.svg" alt="icon_profile">
@@ -31,7 +38,7 @@
         <h1 class="welcome__title">Welcome <br>
           to the Brooklyn <br>Library</h1>
       </section>
-      <section class="about">
+      <section class="about"  id="about">
         <h2 class="section-title">About</h2>
         <div class="section-text">
           The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside 
@@ -61,7 +68,7 @@
           </div>
         </div>
       </section>
-      <section class="favorites">
+      <section class="favorites" id="favorites">
         <h2 class="section-title">Favorites</h2>
         <div class="seasons">
           <form>
@@ -170,8 +177,8 @@
                 <div class="book__description">
                   A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.     
                 </div>
-                <button class="book__button" type="button">
-                  Buy
+                <button class="book__button button__dis" type="button" disabled>
+                  Own
                 </button>
               </div>
             </div> 
@@ -482,7 +489,7 @@
           </div>
         </div>
       </section>
-      <section class="coffeeShop">
+      <section class="coffeeShop" id="coffee">
         <h2 class="section-title">Coffee shop</h2>
         <div class="section-text">
             In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation. 
@@ -548,7 +555,7 @@ you can get a favorite book and read in coffee shop. Our barista to cook you bes
 
           </div>
       </section>
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <h2 class="section-title">Our Contacts</h2>
         <div class="contacts__content">
           <div class="text-block">
@@ -576,7 +583,7 @@ you can get a favorite book and read in coffee shop. Our barista to cook you bes
 
         </div>
       </section>
-      <section class="libraryCard">
+      <section class="libraryCard" id="card">
         <h2 class="section-title">Digital Library Cards</h2>
         <div class="section__content">
           <div class="card__wrapper">
@@ -623,15 +630,15 @@ you can get a favorite book and read in coffee shop. Our barista to cook you bes
           </div>
           <div class="social-links">
             <div class="link"><a href="https://vk.com/grigori.konopelko">
-              <img src="../library/images/u_twitter-alt.svg">
+              <img src="../library/images/u_twitter-alt.svg" alt="twitter">
             </a></div>
 
             <div class="link"><a href="https://vk.com/grigori.konopelko">
-              <img src="../library/images/u_instagram.svg">
+              <img src="../library/images/u_instagram.svg" alt="inst">
             </a></div>
 
             <div class="link"><a href="https://vk.com/grigori.konopelko">
-              <img src="../library/images/u_facebook-f.svg">
+              <img src="../library/images/u_facebook-f.svg" alt="fb">
             </a></div>
           </div>
         </div>
