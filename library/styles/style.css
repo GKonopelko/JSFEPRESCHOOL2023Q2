@@ -124,6 +124,10 @@ html {
   cursor: pointer;
 }
 
+.menu ul li:last-child{
+  padding-right: 0px;
+}
+
 .menu ul li a{
   color: var(--white);
   transition: all ease 0.2s;
@@ -160,7 +164,7 @@ html {
   background-color: var(--lblack);
 }
 
-h1 {
+.welcome h2 {
   font-family: Regular;
   font-size: 40px;
   letter-spacing: 3px;
