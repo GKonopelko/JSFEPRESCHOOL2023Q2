@@ -112,6 +112,7 @@ html {
   line-height: 50%;
   width: 700px;
   text-align: left;
+  letter-spacing: 0.6px;
 }  
 
 .menu ul {
@@ -165,13 +166,20 @@ html {
 }
 
 .welcome h2 {
-  font-family: Regular;
+  font-family: Forum;
   font-size: 40px;
   letter-spacing: 3px;
   color: var(--white);
   text-transform: uppercase;
-  padding: 35px 40px;
+  padding-top: 35px;
+  line-height: 50px;
 }
+
+.welcome h2 span {
+  padding-right: 15px;
+}
+
+
 
 
 .about {
@@ -193,8 +201,8 @@ html {
   content: "";
   display: block;
   width: 50px;
-  padding-top: 20px;
-  margin: 0 auto 40px auto;
+  padding-top: 17px;
+  margin: 0 auto 30px auto;
   border-bottom: 1px solid var(--lblack);
 }
 
@@ -202,7 +210,7 @@ html {
   font-style: Inter;
   font-size: 20px;
   color: var(--black);
-  margin: 50px 0 20px 0;
+  margin: 50px 0 25px 0;
 }
 
 
@@ -217,7 +225,6 @@ html {
   height: 100px;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
 
 }
 
@@ -256,7 +263,6 @@ html {
 .seasons {
   font-size: 20px;
   text-align: left;
-  /* padding: 30px; */
 }
 
 
@@ -268,13 +274,11 @@ html {
 
 .radiobtns {
   display: flex;
-  justify-content:flex-start;
-  align-items: center;
   height: 30px;
 }
 
 .radiobtns label {
-  margin-right: 80px;
+  margin-right: 90px;
 }
 
 .custom {
@@ -295,11 +299,11 @@ html {
   background-image: url("../images/input.svg");
   background-repeat: no-repeat;
   background-size: 17px 17px;
-  background-position: center;
-  display: inline-block;
-  width: 27px;
-  height: 27px;
-  margin-right: 20px;
+  /* background-position: center; */
+  /* display: flex; */
+  width: 22px;
+  height: 22px;
+  margin:  5px 15px 0px 0px;
 }
 
 .custom:checked+label {
@@ -324,7 +328,7 @@ html {
  height: 595px;
  width: 590px;
  position: relative;
- padding: 40px 40px 0 0;
+ padding: 35px 40px 0 0;
 }
 
 .book__border {
@@ -346,7 +350,7 @@ html {
   width: 200px;
   height:300px;
   right: 0;
-  bottom: 0px;
+  bottom: 5px;
 
 }
 
@@ -380,9 +384,10 @@ html {
 }
 
 .book__description {
-  padding-top: 15px;
+  padding-top: 20px;
   letter-spacing: 2px;
   text-transform: capitalize;
+  width:358px;
 }
 
 .book__button {
@@ -397,7 +402,7 @@ html {
   cursor: pointer;
   position: absolute;
   left: 20px;
-  bottom: 15px;
+  bottom: 20px;
   transition: all 0.2s ease;
 }
 
@@ -430,6 +435,12 @@ html {
 .coffeeShop .section-text {
   line-height: 40px;
   letter-spacing: 2px;
+  font-family: Inter;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.coffeeShop .section-text p {
+  margin-left: 10px;
 }
 
 .shop__menu {
@@ -439,12 +450,12 @@ html {
 
 .menu-left{
   height: 520px;
-  width:450px
+  width:440px
 }
 
 .menu-right{
   height: 520px;
-  width:500px;
+  width:540px;
 }
 
 .menu-right .menu__title{
@@ -457,7 +468,7 @@ html {
   letter-spacing: 2px;
   color: var(--beige);
   text-align: left;
-  line-height: 80px;
+  line-height: 75px;
 }
 
 .row {
@@ -478,6 +489,12 @@ html {
   padding-right: 210px;
 }
 
+.price {
+  font-family: Forum;
+  font-size: 20px;
+
+}
+
 .price::before {
   position: absolute;
   content: "";
@@ -486,10 +503,21 @@ html {
   justify-self: center;
   width: 100px;
   height: 1px;
-  right: 60px;
+  right: 85px;
   top:40px;
   background-color: var(--beige);
 }
+
+.menu-right .price::before {
+  right: 90px;
+
+}
+
+.menu-right .name {
+  margin-right: 10px;
+
+}
+
 
 .contacts {
   height: 575px;
@@ -503,19 +531,27 @@ html {
 }
 
 .text-block {
-  width: 503px;
+  width: 520px;
   height: 414px;
-  margin-top: 50px;
-  padding-bottom: 34px;
+  margin-top: 25px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items:flex-start;
   font-size: 20px;
   line-height: 70px;
   text-align: left;
   letter-spacing: 2px;
+  text-transform: capitalize;
 }
+
+.text-block div {
+padding-top: 15px;
+line-height: 60px;
+}
+
+.apua {
+  margin-top: 5px;
+}
+
 
 .map {
   width: 696px;
@@ -545,53 +581,67 @@ a:hover {
 
 .card__find {
   font-size: 30px;
-  margin-bottom: 30px;
+  margin: 0px auto 30px auto;
+  letter-spacing: 0.5px;
 }
 
 .card__box {
-/* height: 386px; */
+height: 385px;
 width: 600px;
-padding: 20px;
+padding: 18px;
 border: 1px solid var(--beige);
 font-size: 30px;
 font-family: Forum;
-line-height: 80px;
+line-height: 75px;
 }
 
 .card {
   width:560px;
   text-align: left;
-  padding: 10px;
+  padding: 10px 10px 20px 20px;
   background: var(--beige);
+  letter-spacing: 0.8px;
+  font-family: Forum;
+  height: 275px;
 
 }
 
 .card__name {
   font-family: Forum;
+  letter-spacing: 0.8px;
+}
+
+.text-field {
+  margin-bottom: 15px;
+
 }
 
 .input {
   font-family: Forum;
   font-size: 30px;
   background-color: var(--white);
-  /* margin: 10px; */
-  border-radius: 5px;
+  padding-left: 20px;
+  border-radius: 7px;
   color: var(--gray);
   width: 520px;
   height: 65px;
+  line-height: 60px;
 }
 
 .card__button {
   font-family: Inter;
   font-size: 20px;
   width: 240px;
+  letter-spacing: 1.2px;
+  font-weight: 700;
+  line-height: 25px;
   padding: 10px 20px;
   text-align: center;
   background-color: var(--white);
   border: 1px solid var(--lblack);
   transition: all 0.2s ease;
   border-radius: 3px;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .card__button:hover {
@@ -602,9 +652,11 @@ line-height: 80px;
 
 
 .card__description {
-  width: 456px;
+  margin-top: 40px;
+  width: 500px;
   height: 253px;
   text-align: right;
+  letter-spacing: 0.7px;
 }
 
 .libraryCard .section__content {
@@ -616,7 +668,6 @@ line-height: 80px;
   font-family: Forum;
   font-size: 30px;
   text-align: right;
-  line-height: 80px;
 }
 
 .description__text {
@@ -624,6 +675,10 @@ line-height: 80px;
   letter-spacing: 2%;
   line-height: 40px;
   text-align: right;
+  margin-top: 35px;
+  letter-spacing: 1px;
+  font-family: Inter;
+  letter-spacing: 0.7px;
 }
 
 .description__buttons {
@@ -631,9 +686,9 @@ line-height: 80px;
 }
 
 .sign-button{
-  width:70px;
+  width:75px;
   height:30px;
-  margin-right: 20px;
+  margin: 0 0px 0 15px;
   background: var(--white);
   font-size: 10px;
   font-weight: bold;
@@ -667,10 +722,12 @@ line-height: 80px;
 
 .adress {
   text-align: left;
+  margin-top: 5px;
 }
 
 .social-links{
  display: flex;
+
 }
 
 .link {
@@ -685,6 +742,8 @@ line-height: 80px;
 
 .timetable {
   text-align: right;
+  margin-top: 0px;
+  line-height: 24px;
 }
 
 .school__links {
@@ -697,6 +756,8 @@ line-height: 80px;
 
 .school__links a {
   color: var(--white);
+  font-size: 20px;
+  letter-spacing: 2px;
 }
 
 
