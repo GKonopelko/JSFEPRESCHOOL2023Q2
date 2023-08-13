@@ -78,19 +78,23 @@ html {
   text-align: center;
 }
 
-* {
+html, *, *::before, *::after {
   box-sizing: border-box; 
 }
+
 
 
 .wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0;
   align-items:center;
+  @media screen and (max-width: 1024px) {
+    width: auto;
+  }
 }
 
 /* Header */
@@ -110,23 +114,78 @@ html {
   font-family: Forum;
   font-size: 30px;
   line-height: 50%;
-  width: 700px;
   text-align: left;
   letter-spacing: 0.6px;
+  flex-wrap: wrap;
 }  
+
+
+.header__text {
+  display: flex;
+  align-items: flex-end;
+  align-items:center;
+  justify-content:end;
+  @media screen and (max-width: 1024px) {
+    position: absolute;
+    right: 0px;
+  }
+}
+
+.menu {
+  @media screen and (max-width: 1024px) {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    right: 0px;
+    top:0px;
+    height: 570px;
+    width: 0px;
+    background-color: var(--lblack);
+    padding:0;
+    transition: all 0.1s ease-in;
+    overflow-x: hidden;
+  }
+}
+
+.menu_active {
+  width: 332px;
+  transition: all 0.2s ease-in;
+}
 
 .menu ul {
   display: flex;
+  align-items: flex-end;
+  align-self: flex-end;
+  gap: 30px;
+  @media screen and (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 90px;
+    padding-right:20px;
+    gap: 55px;
+    width: 100%;
+  }
 }
 
 .menu ul li{
-  padding-right: 30px;
   color: var(--white);
   cursor: pointer;
+  @media screen and (max-width: 1024px) {
+    
+    color: var(--white);
+    cursor: pointer;
+  }
 }
 
 .menu ul li:last-child{
-  padding-right: 0px;
+  padding-right: 40px;
+  @media screen and (max-width: 1024px) {
+    padding-right: 0px;
+  }
 }
 
 .menu ul li a{
@@ -141,6 +200,77 @@ html {
   transition: all 0.5s ease;
 }
 
+.header__icon {
+  margin-right: 0px;
+  @media screen and (max-width: 1024px) {
+    margin-right: 40px;
+    z-index: 99;
+  }
+}
+
+.burger {
+  display: none;
+  @media screen and (max-width: 1024px) {
+    display: flex;
+    margin: auto 0 auto 0;
+    width: 45px;
+    height: 45px;
+    z-index: 99;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+}
+
+.burger__container {
+  display: flex;
+  margin: auto;
+}
+
+.burger__container span {
+  display: block;
+  background: var(--white);
+  height: 2px;
+  width: 45px;
+  position: relative;
+  transition: all ease 0.2s;
+}
+
+.burger__container span::before {
+  content: '';
+  display: block;
+  background: var(--white);
+  height: 2px;
+  width: 45px;
+  top:-10px;
+  position: absolute;
+  transition: all ease 0.2s;
+}
+
+.burger__container span::after {
+  content: '';
+  display: block;
+  background: var(--white);
+  height: 2px;
+  width: 45px;
+  top:10px;
+  position: absolute;
+  transition: all ease 0.2s;
+}
+
+.burger__container_active span {
+  background-color: var(--black);
+}
+
+.burger__container_active span::before  {
+  transform: rotate(-45deg) translate(0px, -50%);
+  top:50%;
+}
+
+.burger__container_active span::after  {
+  transform: rotate(45deg) translate(0px, -50%);
+  top:50%;
+}
+
 
 /* Header */
 
@@ -151,12 +281,21 @@ html {
 }
 
 .welcome {
+  display: flex;
   height: 600px;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("../images/welcome.jpg");
-  padding: 220px 840px 160px 0;
+  padding-bottom: 160px;
+  padding-left: 0px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: flex-start;
+  @media screen and (max-width: 1024px) {
+    width: auto;
+    background-image: url("../images/WelcomeTablet.jpg");
+  }
 }
 
 .welcome__title {
@@ -179,11 +318,8 @@ html {
   padding-right: 15px;
 }
 
-
-
-
 .about {
-  height: 837px;
+  /* height: 837px; */
   width: 100%;
   padding: 20px;
 }
@@ -211,20 +347,64 @@ html {
   font-size: 20px;
   color: var(--black);
   margin: 50px 0 25px 0;
+  @media screen and (max-width: 1024px) {
+    line-height: 40px;
+    margin: 40px 0 20px 0;
+  }
 }
 
 
 .about__images {
   height: 560px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  overflow: hidden;
 }
+
+@media screen and (max-width: 1024px) {
+  .about__images {
+    max-width: 900px;
+  }
+
+  .carousel__image {
+    position: relative;
+  }
+  
+  .carousel__image::before {
+    content: '';
+    height: 24px;
+    width:24px;
+    background-image: url("../images/Carret_Left.svg");
+    position: absolute;
+    left:-80px;
+    top:51.5%;
+    cursor: pointer;
+  }
+
+  .carousel__image::after {
+    content: '';
+    height: 24px;
+    width:24px;
+    background-image: url("../images/Carret_Right.svg");
+    position: absolute;
+    right: -80px;
+    top:51.5%;
+    cursor: pointer;
+  }
+}
+
 
 .carousel-pagination {
   display: flex;
   height: 100px;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 1024px) {
+    height: 60px;
+    margin-bottom: 20px;
+    }
 
 }
 
@@ -235,6 +415,20 @@ html {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+
+.tablet {
+  display: none;
+  @media screen and (max-width: 1024px) {
+    display: block;
+  }
+}
+
+.desktop {
+  display: block;
+  @media screen and (max-width: 1024px) {
+    display: none
+  }
 }
 
 .pagination__button:hover .dot{
@@ -256,8 +450,7 @@ html {
 }
 
 .favorites {
-  height: 1439px;
-  padding: 20px 20px 0px 20px;
+  padding: 00px 20px 35px 20px;
 }
 
 .seasons {
@@ -275,11 +468,9 @@ html {
 .radiobtns {
   display: flex;
   height: 30px;
+  gap: 90px;
 }
 
-.radiobtns label {
-  margin-right: 90px;
-}
 
 .custom {
   position: absolute;
@@ -299,8 +490,6 @@ html {
   background-image: url("../images/input.svg");
   background-repeat: no-repeat;
   background-size: 17px 17px;
-  /* background-position: center; */
-  /* display: flex; */
   width: 22px;
   height: 22px;
   margin:  5px 15px 0px 0px;
@@ -315,14 +504,15 @@ html {
 }
 
 .favorites__items {
- height: 1150px;
  width: 100%;
  display: flex;
  justify-content:space-between;
- /* align-items:normal; */
  flex-wrap: wrap;
+ @media screen and (max-width: 1280px) {
+  flex-direction: column;
+  align-items: center;
+  }
 }
-
 
 .book {
  height: 595px;
@@ -404,6 +594,7 @@ html {
   left: 20px;
   bottom: 20px;
   transition: all 0.2s ease;
+  text-align: center;
 }
 
 .book__button:hover {
@@ -424,7 +615,7 @@ html {
 
 .coffeeShop {
  padding: 20px 20px 40px 20px;
- height:841px;
+ /* height:841px; */
  width:100%;
 }
 
@@ -438,6 +629,10 @@ html {
   font-family: Inter;
   font-size: 20px;
   margin-right: 10px;
+  @media screen and (max-width: 1024px) {
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
 }
 .coffeeShop .section-text p {
   margin-left: 10px;
@@ -446,6 +641,10 @@ html {
 .shop__menu {
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    gap: 40px;
+  }
 }
 
 .menu-left{
@@ -456,6 +655,11 @@ html {
 .menu-right{
   height: 520px;
   width:540px;
+
+  @media screen and (max-width: 1024px) {
+    width:fit-content;
+    align-self: flex-end;
+  }
 }
 
 .menu-right .menu__title{
@@ -520,14 +724,17 @@ html {
 
 
 .contacts {
-  height: 575px;
-  padding: 20px 20px 40px 20px;
+  padding: 35px 20px 40px 20px;
   
 }
 
 .contacts__content {
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 1280px) {
+    flex-direction: column;
+    gap: 40px;
+  }
 }
 
 .text-block {
@@ -541,6 +748,9 @@ html {
   text-align: left;
   letter-spacing: 2px;
   text-transform: capitalize;
+  @media screen and (max-width: 1024px) {
+    margin-top: 30px;
+  }
 }
 
 .text-block div {
@@ -557,6 +767,10 @@ line-height: 60px;
   width: 696px;
   height: 414px;
   margin-top: 40px;
+  @media screen and (max-width: 1024px) {
+    width:auto;
+  }
+  
 }
 
 a,
@@ -569,14 +783,23 @@ a:hover {
 }
 
 .libraryCard {
-  /* height: 575px; */
   padding: 20px 20px 40px 20px;
 }
 
+.section__content {
+  @media screen and (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .card__wrapper{
-  /* height: 453px; */
   width: 600px;
   margin-top: 40px;
+  @media screen and (max-width: 1024px) {
+    width: auto;
+  }
 }
 
 .card__find {
@@ -657,6 +880,12 @@ line-height: 75px;
   height: 253px;
   text-align: right;
   letter-spacing: 0.7px;
+  @media screen and (max-width: 1024px) {
+    margin-top: 20px;
+    height: auto;
+    width: auto;
+    padding: 0 50px
+  }
 }
 
 .libraryCard .section__content {
@@ -668,6 +897,9 @@ line-height: 75px;
   font-family: Forum;
   font-size: 30px;
   text-align: right;
+  @media screen and (max-width: 1024px) {
+    text-align: center;;
+   }
 }
 
 .description__text {
@@ -679,10 +911,18 @@ line-height: 75px;
   letter-spacing: 1px;
   font-family: Inter;
   letter-spacing: 0.7px;
+  @media screen and (max-width: 1024px) {
+   text-align: center;
+   margin-top: 40px;
+  }
 }
 
 .description__buttons {
   margin-top: 35px;
+  @media screen and (max-width: 1024px) {
+    text-align: center;
+    margin-top: 40px;
+   }
 }
 
 .sign-button{
@@ -695,6 +935,10 @@ line-height: 75px;
   border-radius: 3px;
   border: 1px solid;
   transition: all 0.2s ease;
+  @media screen and (max-width: 1024px) {
+    text-align: center;
+    margin: 0 10px;
+   }
 }
 
 .sign-button:hover{
@@ -760,6 +1004,10 @@ line-height: 75px;
   letter-spacing: 2px;
 }
 
-
-
 /* Footer */
+
+/* Adaptive */
+
+
+
+/* Adaptive */
