@@ -1,0 +1,15 @@
+button {
+  padding: 1rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1rem;
+  background-image: url(assets/svg/play.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: bisque;
+  background-color: aquamarine;
+}
+
+.pause {
+  background-image: url(assets/svg/pause.png);
+}
