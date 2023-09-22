@@ -7,7 +7,7 @@ const progressline = document.querySelector('.progressline');
 const progressdot = document.querySelector('.progressdot');
 
 let background = document.querySelector('.wrapper');
-let cover = document.querySelector('.cover img');
+let cover = document.querySelector('.coverImg');
 let trackName = document.querySelector('.track__name');
 let trackAuthor = document.querySelector('.track__author');
 let isPlay = false;
@@ -46,10 +46,13 @@ function playAudio() {
     audio.play();
     isPlay = true;
     play.classList.toggle('pause');
+    cover.classList.toggle('playW');
+
   } else {
     audio.pause();
     isPlay = false;
     play.classList.toggle('pause');
+    cover.classList.toggle('playW');
   }
 }
 
@@ -60,6 +63,7 @@ function playPrev() {
     audio.play();
     isPlay = true;
     play.classList.toggle('pause');
+    cover.classList.toggle('playW');
   } else {
     audio.play();
   }
@@ -70,9 +74,9 @@ function playNext() {
   choseTrack(playNum);
   if (isPlay === false) {
     audio.play();
-
     isPlay = true;
     play.classList.toggle('pause');
+    cover.classList.toggle('playW');
   } else {
     audio.play();
   }
