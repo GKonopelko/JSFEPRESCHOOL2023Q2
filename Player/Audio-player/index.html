@@ -7,11 +7,33 @@
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
-<!-- <audio src="assets/audio/Melodiya_dlya_flejjty.mp3"></audio> -->
-<button class="play">Play</button>
-<button class="pause">Pause</button>
+  <div class="wrapper">
+    <div class="player">
+      <div class="cover"> <img src="assets/img/lonelyShepherd.jpg" alt="lonelyShepherd"> </div>
+      <div class="controls">
+        <button class="playBtn play"></button>
+        <div class="track">
+          <p class="track__name">Lonely Shepherd</p>
+          <p class="track__author">James Last</p>
 
-
+        </div>
+        <div class="buttons">
+          <button class="backward"></button>
+          <button class="forward"></button>
+        </div>
+      </div>
+      <span class="length">00.00</span>
+      <div class="progress">
+        <div class="progressbar">
+          <div class="progressline"></div>
+          <div class="progressdot"></div>
+          <div class="timer">
+            <span class="time">00.00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
