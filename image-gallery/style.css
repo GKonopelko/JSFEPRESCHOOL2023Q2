@@ -48,9 +48,9 @@ a,
 a:visited {
   text-decoration: none;
 }
-a:hover {
+/* a:hover {
   text-decoration: none;
-}
+} */
 ul li {
   list-style: none;
 }
