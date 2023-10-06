@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memo Game</title>
+  <link href="style.css" rel="stylesheet">
+  <link rel="icon" href="assets/icons/icon.rabbit.png">
+</head>
+<body class="body">
+  <header class="header container">
+    <div class="wrapper">
+      <div class="title"> 
+        <div> <h2>Найди парные картинки  - Find matching pictures</h2></div>
+        <div>
+          <img class="clock" src="assets/icons/clock.png" alt="clock">
+        </div>
+       
+      </div>
+    </div>
+  </header>
+  <main class="main container">
+    <div class="wrapper">
+      <div class="cards" id="cards">
+        <div class="card" data-abc="a">
+          <img class="card__front" src="assets/images/image_part_001.jpg" alt="a">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+
+        <div class="card" data-abc="b">
+          <img class="card__front" src="assets/images/image_part_002.jpg" alt="b">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+       
+        <div class="card " data-abc="c">
+          <img class="card__front" src="assets/images/image_part_003.jpg" alt="c">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+        
+        <div class="card " data-abc="d">
+          <img class="card__front" src="assets/images/image_part_004.jpg" alt="d">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+        
+        <div class="card " data-abc="e">
+          <img class="card__front" src="assets/images/image_part_005.jpg" alt="e">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="f">
+          <img class="card__front" src="assets/images/image_part_006.jpg" alt="f">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+  
+        <div class="card " data-abc="g">
+          <img class="card__front" src="assets/images/image_part_007.jpg" alt="g">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+    
+        <div class="card " data-abc="h">
+          <img class="card__front" src="assets/images/image_part_008.jpg" alt="h">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+
+        <div class="card " data-abc="i">
+          <img class="card__front" src="assets/images/image_part_009.jpg" alt="i">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+
+        <div class="card " data-abc="j">
+          <img class="card__front" src="assets/images/image_part_010.jpg" alt="j">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+
+        <div class="card " data-abc="k">
+          <img class="card__front" src="assets/images/image_part_011.jpg" alt="k">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+
+        <div class="card " data-abc="l">
+          <img class="card__front" src="assets/images/image_part_012.jpg" alt="l">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="m">
+          <img class="card__front" src="assets/images/image_part_013.jpg" alt="m">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="n">
+          <img class="card__front" src="assets/images/image_part_014.jpg" alt="n">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="o">
+          <img class="card__front" src="assets/images/image_part_015.jpg" alt="o">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="p">
+          <img class="card__front" src="assets/images/image_part_016.jpg" alt="p">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="q">
+          <img class="card__front" src="assets/images/image_part_017.jpg" alt="q">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="r">
+          <img class="card__front" src="assets/images/image_part_018.jpg" alt="r">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="s">
+          <img class="card__front" src="assets/images/image_part_019.jpg" alt="s">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="t">
+          <img class="card__front" src="assets/images/image_part_020.jpg" alt="t">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="u">
+          <img class="card__front" src="assets/images/image_part_021.jpg" alt="u">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="v">
+          <img class="card__front" src="assets/images/image_part_022.jpg" alt="v">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="w">
+          <img class="card__front" src="assets/images/image_part_023.jpg" alt="w">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="x">
+          <img class="card__front" src="assets/images/image_part_024.jpg" alt="x">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="y">
+          <img class="card__front" src="assets/images/image_part_025.jpg" alt="y">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="z">
+          <img class="card__front" src="assets/images/image_part_026.jpg" alt="z">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        
+        <div class="card" data-abc="a">
+          <img class="card__front" src="assets/images/image_part_001.jpg" alt="a">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+
+        <div class="card" data-abc="b">
+          <img class="card__front" src="assets/images/image_part_002.jpg" alt="b">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+       
+        <div class="card " data-abc="c">
+          <img class="card__front" src="assets/images/image_part_003.jpg" alt="c">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+        
+        <div class="card " data-abc="d">
+          <img class="card__front" src="assets/images/image_part_004.jpg" alt="d">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+        
+        <div class="card " data-abc="e">
+          <img class="card__front" src="assets/images/image_part_005.jpg" alt="e">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="f">
+          <img class="card__front" src="assets/images/image_part_006.jpg" alt="f">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+  
+        <div class="card " data-abc="g">
+          <img class="card__front" src="assets/images/image_part_007.jpg" alt="g">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+    
+        <div class="card " data-abc="h">
+          <img class="card__front" src="assets/images/image_part_008.jpg" alt="h">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+
+        <div class="card " data-abc="i">
+          <img class="card__front" src="assets/images/image_part_009.jpg" alt="i">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+
+        <div class="card " data-abc="j">
+          <img class="card__front" src="assets/images/image_part_010.jpg" alt="j">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+
+        <div class="card " data-abc="k">
+          <img class="card__front" src="assets/images/image_part_011.jpg" alt="k">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+
+        <div class="card " data-abc="l">
+          <img class="card__front" src="assets/images/image_part_012.jpg" alt="l">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="m">
+          <img class="card__front" src="assets/images/image_part_013.jpg" alt="m">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="n">
+          <img class="card__front" src="assets/images/image_part_014.jpg" alt="n">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="o">
+          <img class="card__front" src="assets/images/image_part_015.jpg" alt="o">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="p">
+          <img class="card__front" src="assets/images/image_part_016.jpg" alt="p">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="q">
+          <img class="card__front" src="assets/images/image_part_017.jpg" alt="q">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="r">
+          <img class="card__front" src="assets/images/image_part_018.jpg" alt="r">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="s">
+          <img class="card__front" src="assets/images/image_part_019.jpg" alt="s">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="t">
+          <img class="card__front" src="assets/images/image_part_020.jpg" alt="t">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="u">
+          <img class="card__front" src="assets/images/image_part_021.jpg" alt="u">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="v">
+          <img class="card__front" src="assets/images/image_part_022.jpg" alt="v">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="w">
+          <img class="card__front" src="assets/images/image_part_023.jpg" alt="w">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="x">
+          <img class="card__front" src="assets/images/image_part_024.jpg" alt="x">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="y">
+          <img class="card__front" src="assets/images/image_part_025.jpg" alt="y">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+ 
+        <div class="card " data-abc="z">
+          <img class="card__front" src="assets/images/image_part_026.jpg" alt="z">
+          <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
+        </div>
+
+      </div>
+    </div>
+  </main>
+  <footer class="footer container">
+    <div class="wrapper">
+      <div>
+        <a href="https://github.com/GKonopelko" class="link"
+          ><img src="assets/icons/github-mark.svg" alt="GKonopelko"></a
+        >
+      </div>
+      <div><span>2023</span></div>
+      <div><a href=" https://rs.school/js" class="link"> <img src="assets/icons/rs_school_js.svg" alt="rs-school" /></a></div>
+    </div>
+  </footer>
+  
+
+  <script src="example/ex.js"></script>
+</body>
+</html>
