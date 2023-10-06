@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +11,22 @@
   <header class="header container">
     <div class="wrapper">
       <div class="title"> 
-        <div> <h2>Найди парные картинки  - Find matching pictures</h2></div>
-        <div>
-          <img class="clock" src="assets/icons/clock.png" alt="clock">
-        </div>
-       
+        <div> <h2>Найди парные картинки</h2></div>
       </div>
+      <div>
+        <img class="clock" src="assets/icons/clock.png" alt="clock">
+      </div>
+      <div class="moves">
+        Ходов: 0
+      </div>
+      <div class="pairs">
+        Найдено пар: 0/0
+      </div>
+      <div class="gameOver">1</div>
+      <button class="newGame">
+        Новая игра
+      </button>
+
     </div>
   </header>
   <main class="main container">
@@ -37,7 +47,7 @@
           <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
         </div>
         
-        <div class="card " data-abc="d">
+        <!-- <div class="card " data-abc="d">
           <img class="card__front" src="assets/images/image_part_004.jpg" alt="d">
           <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
         </div>
@@ -150,7 +160,7 @@
         <div class="card " data-abc="z">
           <img class="card__front" src="assets/images/image_part_026.jpg" alt="z">
           <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
-        </div>
+        </div> -->
  
         
         <div class="card" data-abc="a">
@@ -168,7 +178,7 @@
           <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
         </div>
         
-        <div class="card " data-abc="d">
+        <!-- <div class="card " data-abc="d">
           <img class="card__front" src="assets/images/image_part_004.jpg" alt="d">
           <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
         </div>
@@ -281,7 +291,7 @@
         <div class="card " data-abc="z">
           <img class="card__front" src="assets/images/image_part_026.jpg" alt="z">
           <img class="card__back" src="assets/images/rabbitInGrass.jpg" alt="rabbit">
-        </div>
+        </div> -->
 
       </div>
     </div>
@@ -299,6 +309,6 @@
   </footer>
   
 
-  <script src="example/ex.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
